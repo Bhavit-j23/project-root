@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Form</h1>
+
+        <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <textarea name="message" placeholder="Enter Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <% if (response) { %>
+            <div class="result">
+                <h3><%= response.status %></h3>
+                <p><%= response.message %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
